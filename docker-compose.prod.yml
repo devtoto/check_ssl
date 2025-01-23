@@ -1,6 +1,6 @@
 services:
   check_ssl:
-    image: ghcr.io/devtoto/check_ssl
+    image: ghcr.io/devtoto/check_ssl:latest
     container_name: check_ssl
     restart: unless-stopped
     environment:
