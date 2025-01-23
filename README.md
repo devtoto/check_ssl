@@ -21,9 +21,16 @@ This service monitors SSL certificates for multiple domains and provides a web i
    example.com 443
    anotherdomain.com 8443
    ```
-3. Build and start the service:
+3. Choose your deployment method:
+
+   **Development (build from source):**
    ```bash
    docker compose up -d
+   ```
+
+   **Production (use pre-built image):**
+   ```bash
+   docker compose -f docker-compose.prod.yml up -d
    ```
 
 ## Configuration

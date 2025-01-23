@@ -1,0 +1,18 @@
+services:
+  check_ssl:
+    image: ghcr.io/devtoto/check_ssl:sha256-01b42dd5a0a58815d26b920ac27dc5d45a0a75184391ed6df8d8f01b386e9734.sig
+    container_name: check_ssl
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Zurich
+    volumes:
+      - ./hosts.txt:/app/hosts.txt
+      - ./certs:/var/www/html/certs
+    ports:
+      - "8080:80"
+    networks:
+      - ssl_network
+
+networks:
+  ssl_network:
+    driver: bridge
