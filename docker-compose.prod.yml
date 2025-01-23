@@ -1,6 +1,6 @@
 services:
   check_ssl:
-    image: ghcr.io/devtoto/check_ssl:sha256-01b42dd5a0a58815d26b920ac27dc5d45a0a75184391ed6df8d8f01b386e9734.sig
+    image: ghcr.io/devtoto/check_ssl
     container_name: check_ssl
     restart: unless-stopped
     environment:
